@@ -1,0 +1,113 @@
+# 1. Day of the Week
+
+day = int(input("Enter a number from 1-7. "))
+if day == 1:
+    print("Monday")
+elif day == 2:
+    print("Tuesday")
+elif day == 3:
+    print("Wednesday")
+elif day == 4:
+    print("Thursday")
+elif day == 5:
+    print("Friday")
+elif day == 6:
+    print("Saturday")
+elif day == 7:
+    print("Sunday")
+elif day >= 8:
+    print("ERROR!")
+
+
+# 2. Areas of Rectangles
+
+length1 = float(input("Enter the length of Rectangle 1. "))
+width1 = float(input("Enter the width of Rectangle 1. "))
+length2 = float(input("Enter the length of Rectangle 2. "))
+width2 = float(input("Enter the width of Rectangle 2. "))
+rectangle1 = length1 * width1
+rectangle2 = length2 * width2
+if rectangle1 > rectangle2:
+    print("\n Rectangle 1 has a greater area than Rectangle 2.")
+elif rectangle1 < rectangle2:
+    print("\n Rectangle 2 has a greater area than Rectangle 1.")
+elif rectangle1 == rectangle2:
+    print("\n Both rectangles have the same area.")
+
+
+# 3. Age of Classifier
+
+age = int(input("Enter your age: "))
+if age <= 1:
+    print("You are an infant.")
+elif age > 1 and age < 13:
+    print("You are a child.")
+elif age >= 13 and age < 20:
+    print("You are a teenager.")
+elif age >= 20:
+    print("You are an adult.")
+
+
+# 4. Roman Numerals
+
+numeral = int(input("Enter a number from 1-10: "))
+if numeral == 1:
+    print("I")
+elif numeral == 2:
+    print("II")
+elif numeral == 3:
+    print("III")
+elif numeral == 4:
+    print("IV")
+elif numeral == 5:
+    print("V)")
+elif numeral == 6:
+    print("VI")
+elif numeral == 7:
+    print("VII")
+elif numeral == 8:
+    print("VIII")
+elif numeral == 9:
+    print("IX")
+elif numeral == 10:
+    print("X")
+
+
+# 5. Mass and Weight
+
+mass = float(input("Enter the object's mass: "))
+weight = mass * 9.8
+if weight > 100 and weight < 500:
+    print(f'The object\'s weight is {weight:.2f}.')
+elif weight < 100:
+    print("Too light!")
+elif weight > 500:
+    print("Too heavy!")
+
+
+# 6. Magic Dates
+
+month = int(input("Enter a month in numerical form: "))
+day = int(input("Enter a date in numerical form: "))
+year = int(input("Enter the last two digits of a year: "))
+if month * day == year:
+    print(f'\n{month}/{day}/{year} is a magic date!')
+elif month * day != year:
+    print(f'\n{month}/{day}/{year} is not a magic date.')
+
+
+# 7. Color Mixer
+primarycolorA = input("Enter a primary color: ")
+primarycolorB = input("Enter another primary color: ")
+primarycolors = primarycolorA or primarycolorB
+if primarycolorA == (red, blue, yellow):
+    primarycolorA = true
+elif primarycolorB = (red, blue, yellow):
+    primarycolorB = true
+elif primarycolors == red or blue
+    print("Purple")
+elif primarycolors == red or yellow
+    print("Orange")
+elif primarycolors == blue or yellow
+    print("Green")
+elif
