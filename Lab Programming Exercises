@@ -97,17 +97,21 @@ elif month * day != year:
 
 
 # 7. Color Mixer
+
 primarycolorA = input("Enter a primary color: ")
 primarycolorB = input("Enter another primary color: ")
 primarycolors = primarycolorA or primarycolorB
-if primarycolorA == (red, blue, yellow):
-    primarycolorA = true
-elif primarycolorB = (red, blue, yellow):
-    primarycolorB = true
-elif primarycolors == red or blue
+if primarycolorA == ('red', 'blue', 'yellow'):
+    primarycolorA = True
+elif primarycolorB == ('red', 'blue', 'yellow'):
+    primarycolorB = True
+elif primarycolors == 'red' or 'blue':
     print("Purple")
-elif primarycolors == red or yellow
+elif primarycolors == 'red' or 'yellow':
     print("Orange")
-elif primarycolors == blue or yellow
+elif primarycolors == 'blue' or 'yellow':
     print("Green")
-elif
+
+
+# 8. Hot Dog Cookout Calculator
+
