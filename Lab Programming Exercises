@@ -115,3 +115,185 @@ elif primarycolors == 'blue' or 'yellow':
 
 # 8. Hot Dog Cookout Calculator
 
+guests = int(input("How many people are attending the cookout? "))
+food = int(input("How many hot dogs will each person be given? "))
+total_food = guests * food
+hotdogs = 10
+buns = 8
+total_hotdogs = round(total_food / hotdogs)
+total_buns = round(total_food / buns)
+leftover_hotdogs = (total_hotdogs * hotdogs) - total_food
+leftover_buns = (total_buns * buns) - total_food
+print(f'\nA minimum of {total_hotdogs} packages of hot dogs are required.')
+print(f'\nA minimum of {total_buns} packages of hot dog buns are required.')
+print(f'\nThere will be {leftover_hotdogs} hot dogs left over.')
+print(f'\nThere will be {leftover_buns} buns left over.')
+
+# 9. Roulette Wheel Colors
+
+pocket_number = int(input("Enter a pocket number: "))
+if pocket_number == 0:
+    print("Green")
+elif pocket_number >= 1 and pocket_number <= 10 and pocket_number % 2 == 0:
+    print("Black")
+elif pocket_number >= 1 and pocket_number <= 10 and pocket_number % 2 == 1:
+    print("Red")
+elif pocket_number >= 11 and pocket_number <= 18 and pocket_number % 2 == 0:
+    print("Red")
+elif pocket_number >= 11 and pocket_number <= 18 and pocket_number % 2 == 1:
+    print("Black")
+elif pocket_number >= 19 and pocket_number <= 28 and pocket_number % 2 == 0:
+    print("Black")
+elif pocket_number >= 19 and pocket_number <= 28 and pocket_number % 2 == 1:
+    print("Red")
+elif pocket_number >= 29 and pocket_number <= 36 and pocket_number % 2 == 0:
+    print("Red")
+elif pocket_number >= 29 and pocket_number <= 36 and pocket_number % 2 == 1:
+    print("Black")
+elif pocket_number > 36:
+    print("ERROR!")
+
+
+# 10. Money Counting Game
+
+pennies = float(input("Number of pennies: ")) * 0.01
+nickels = float(input("Number of nickels: ")) * 0.05
+dimes = float(input("Number of dimes: ")) * 0.1
+quarters = float(input("Number of quarters: ")) * 0.25
+if pennies + nickels + dimes + quarters == 1:
+    print("You win!")
+elif pennies + nickels + dimes + quarters < 1:
+    print("Your total was less than a dollar.")
+elif pennies + nickels + dimes + quarters > 1:
+    print("Your total was greater than a dollar.")
+
+
+# 11. Book Club Points
+
+purchased_books = int(input("Books purchased: "))
+if purchased_books == 0 or purchased_books < 2:
+    print("You earned 0 points.")
+elif purchased_books >= 2 and purchased_books < 4:
+    print("You earned 5 points.")
+elif purchased_books >= 4 and purchased_books < 6:
+    print("You earned 15 points.")
+elif purchased_books >= 6 and purchased_books < 8:
+    print("You earned 30 points.")
+elif purchased_books >= 8:
+    print("You earned 60 points.")
+
+
+# 12. Software Sales
+
+packages_purchased = float(input("Packages purchased: "))
+price = packages_purchased * 99
+if packages_purchased < 10:
+    print(f'Total: ${price}')
+elif packages_purchased >= 10 and packages_purchased <=19:
+    print(f'Discount: 10%\nTotal: ${(price * 0.1):.2f}')
+elif packages_purchased >= 20 and packages_purchased <= 49:
+    print(f'Discount: 20%\nTotal: ${(price * 0.2):.2f}')
+elif packages_purchased >= 50 and packages_purchased <= 99:
+    print(f'Discount: 30%\nTotal: ${(price * 0.3):.2f}')
+elif packages_purchased >= 100:
+    print(f'Discount: 40%\nTotal: ${(price * 0.4):.2f}')
+
+
+# 13. Shipping Charges
+
+weight = float(input("Enter the weight of the package, in pounds: "))
+if weight <= 2:
+    print("Shipping Charges: $1.50")
+elif weight > 2 and weight <= 6:
+    print("Shipping Charges: $3.00")
+elif weight > 6 and weight <= 10:
+    print("Shipping Charges: $4.00")
+elif weight > 10:
+    print("Shipping Charges: $4.75")
+
+
+# 14. Time Calculator
+
+seconds = int(input("Enter a number of seconds: "))
+if seconds < 60:
+    print(f'{seconds} seconds')
+elif seconds == 60:
+    print("1 minute")
+elif seconds > 60 and seconds < 3600:
+    print(f'{seconds // 60} minutes, {seconds % 60} seconds')
+elif seconds == 3600:
+    print("1 hour")
+elif seconds > 3600 and seconds < 86400:
+    print(f'{seconds // 3600} hours, {(seconds % 3600) // 60} minutes, {(seconds % 360) % 60} seconds')
+elif seconds == 86400:
+    print("1 day")
+elif seconds > 86400:
+    print(f'{seconds // 86400} hours, {(seconds % 86400) // 3600} hours, {((seconds % 86400) % 3600) // 60} minutes, {((seconds % 86400) % 3600) % 60} seconds')
+
+
+# 15. February Days
+
+year = int(input("Enter a year: "))
+if year % 100 == 0 and year % 400 == 0:
+    print(f'In {year}, February has 29 days.')
+elif year % 100 != 0 and year % 4 == 0:
+    print(f'In {year} February has 29 days.')
+else:
+    print(f'In {year} February has 28 days.')
+
+
+# 16. Wi-Fi Diagnostic Tree
+
+print("Reboot the computer and try to connect.")
+if input("Did that fix the problem? ") == 'no':
+    print("Reboot the router and try to connect.")
+if input("Did that fix the problem? ") == 'no':
+    print("Make sure the cables between the router and modem are plugged in firmly.")
+if input("Did that fix the problem? ") == 'no':
+    print("Move the router to a new location.")
+if input("Did that fix the problem? ") == 'no':
+    print("Get a new router.")
+
+
+# 17. Restaurant Selector
+
+vegetarian = input("Is anyone in your party a vegetarian? ")
+if vegetarian == "yes" or vegetarian == "no":
+    vegan = input("Is anyone in your party a vegan? ")
+    if vegan == "yes" or vegan == "no":
+        gluten_free = input("Is anyone in your party gluten-free? ")
+        if gluten_free == "yes" or gluten_free == "no":
+            print("\nHere are your restaurant choices:\n")
+
+            if vegetarian == "yes":
+                if vegan == "yes":
+                    if gluten_free == "yes" or gluten_free == "no":
+                        print("Corner Cafe\n" + \
+                        "The Chef's Kitchen\n")
+                else: 
+                    if gluten_free == "yes":
+                        print("Main Street Pizza Company\n" + \
+                        "Corner Cafe\n" + \
+                        "The Chef's Kitchen\n")
+                    else:
+                        print("Main Street Pizza Company\n" + \
+                        "Corner Cafe\n" + \
+                        "Mama's Fine Italian\n" + \
+                        "The Chef's Kitchen\n")
+            else:
+                if vegan == "yes":
+                    if gluten_free == "yes" or gluten_free == "no":
+                        print("Corner Cafe\nThe Chef's Kitchen\n")
+
+                else:
+                    if gluten_free == "yes":
+                        print("Main Street Pizza Company\n" + \
+                        "Corner Cafe\n" + \
+                         "The Chef's Kitchen\n")
+                                   
+                    else:
+                        print("Joe's Gourmet Burgers\n" + \
+                        "Main Street Pizza Company\n" + \
+                        "Corner Cafe\n" + \
+                        "Mama's Fine Italian\n" + \
+                        "The Chef's Kitchen\n")
